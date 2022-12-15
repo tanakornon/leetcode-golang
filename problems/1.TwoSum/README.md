@@ -1,3 +1,3 @@
-1143. Longest Common Subsequence
+# 1. Two Sum
 
-https://leetcode.com/problems/longest-common-subsequence/
+https://leetcode.com/problems/two-sum/
