@@ -10,6 +10,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func NewLinkedList(nums []int) *ListNode {
+	list := new(LinkedList)
+	list.CreateList(nums)
+	return list.Head
+}
+
 func (list *LinkedList) CreateNode(value int) *ListNode {
 	return &ListNode{
 		Val:  value,
