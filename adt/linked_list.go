@@ -1,8 +1,8 @@
-package problems
+package adt
 
 type LinkedList struct {
-	head *ListNode
-	len  int
+	Head *ListNode
+	Len  int
 }
 
 type ListNode struct {
@@ -10,27 +10,27 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func (list *LinkedList) createNode(value int) *ListNode {
+func (list *LinkedList) CreateNode(value int) *ListNode {
 	return &ListNode{
 		Val:  value,
 		Next: nil,
 	}
 }
 
-func (list *LinkedList) createList(nums []int) {
+func (list *LinkedList) CreateList(nums []int) {
 	head := new(ListNode)
 	tail := head
 
 	for _, num := range nums {
-		tail.Next = list.createNode(num)
+		tail.Next = list.CreateNode(num)
 		tail = tail.Next
 	}
 
-	list.head = head.Next
-	list.len = len(nums)
+	list.Head = head.Next
+	list.Len = len(nums)
 }
 
-func (list *LinkedList) toArray(head *ListNode) []int {
+func (list *LinkedList) ToArray(head *ListNode) []int {
 	var nums []int
 
 	for ; head != nil; head = head.Next {

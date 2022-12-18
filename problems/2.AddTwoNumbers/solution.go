@@ -1,5 +1,9 @@
 package problems
 
+import (
+	. "leetcode-go/adt"
+)
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -7,7 +11,6 @@ package problems
  *     Next *ListNode
  * }
  */
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	head := new(ListNode)
 	tail := head
